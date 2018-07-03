@@ -14,7 +14,7 @@
 ##   Handle line endings automatically for files detected as
 ##   text and leave all files detected as binary untouched.
 ##   This will handle all files NOT defined below.
-*               text=auto
+*               text=auto   eol=lf
 
 ## DOCUMENTATION
 *.markdown      text
@@ -38,11 +38,11 @@ readme          text
 ## CONFIGS
 *.conf          text
 *.config        text
-.editorconfig   text
-.gitattributes  text
-.gitconfig      text
-.gitignore      text
-.gitmodules     text
+.editorconfig   text    eol=auto
+.gitattributes  text    eol=auto
+.gitconfig      text    eol=auto
+.gitignore      text    eol=auto
+.gitmodules     text    eol=auto
 
 ## GRAPHICS
 # These files are binary and should be left untouched
