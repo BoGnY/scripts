@@ -1,0 +1,63 @@
+## GITATTRIBUTES FOR CSHARP PROJECTS AND COMMON PROJECTS
+# Based on https://github.com/alexkaratarakis/gitattributes
+#
+# These settings are for c# project (with added common project settings).
+#
+# Details per file setting:
+#   text    These files should be normalized (i.e. convert CRLF to LF).
+#   binary  These files are binary and should be left untouched.
+#
+# Note that binary is a macro for -text -diff.
+######################################################################
+
+## AUTO-DETECT
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*               text=auto
+
+## DOCUMENTATION
+*.markdown      text
+*.md            text
+*.txt           text
+*COPYRIGHT*     text
+*README*        text
+AUTHORS         text
+CHANGELOG       text
+CHANGES         text
+CONTRIBUTING    text
+COPYING         text
+INSTALL         text
+LICENSE         text
+NEWS            text
+TODO            text
+copyright       text
+license         text
+readme          text
+
+## CONFIGS
+*.conf          text
+*.config        text
+.editorconfig   text
+.gitattributes  text
+.gitconfig      text
+.gitignore      text
+.gitmodules     text
+
+## GRAPHICS
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.bmp           binary
+*.eps           binary
+*.gif           binary
+*.ico           binary
+*.jpg           binary
+*.jpeg          binary
+*.png           binary
+*.svg           binary
+*.tif           binary
+*.tiff          binary
+
+## OTHER
+*.bat           text    eol=crlf
+*.sh            text    eol=lf
