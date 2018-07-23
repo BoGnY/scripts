@@ -54,7 +54,7 @@ pre-commit install-hooks
 
 # Starting by Git v2.9.0 hooks dir can be set using `git config core.hooksPath`
 
-SCRIPT_DIR=$(pwd)"/git-hooks"
+SCRIPT_DIR=$(pwd)"/scripts/git-hooks"
 DESTINATION_DIR="./.git/hooks"
 SCRIPTS=$(ls "$SCRIPT_DIR" | tr "\n" " ")
 
