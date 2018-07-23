@@ -1,0 +1,32 @@
+# Pre-commit configuration file
+# @see http://pre-commit.com/
+
+fail_fast: false
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v1.3.0
+    hooks:
+    -   id: check-executables-have-shebangs
+        files: ^\.(sh)$
+    -   id: check-json
+    -   id: check-symlinks
+    -   id: check-yaml
+    -   id: detect-private-key
+    -   id: end-of-file-fixer
+    -   id: mixed-line-ending
+    -   id: trailing-whitespace
+-   repo: https://github.com/pre-commit/pre-commit
+    rev: v1.7.0
+    hooks:
+    -   id: validate_manifest
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.5
+    hooks:
+    -   id: remove-tabs
+        args: [ --whitespaces-count, '4' ]
+        exclude_types: [text, markdown]
+- repo: https://github.com/BoGnY/pre-commit-hooks
+  rev: master
+  hooks:
+    -   id: remove-byte-order-mark
